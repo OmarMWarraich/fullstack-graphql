@@ -24,10 +24,22 @@ cd fullstack-graphql-
 yarn install
 ```
 
-3. Start the server:
+3. Start the development server:
 
 ```bash
-yarn server
+yarn dev
+```
+
+4. Build the project (for production):
+
+```bash
+yarn build
+```
+
+5. Start the production server:
+
+```bash
+yarn start
 ```
 
 The server will start at `http://localhost:4000` and you can access the GraphQL Playground at the same URL.
@@ -233,21 +245,35 @@ query {
 fullstack-graphql-/
 ├── api/
 │   └── src/
-│       ├── server.js      # Apollo Server setup
-│       ├── schema.js      # GraphQL schema definition
-│       └── resolvers.js   # Query resolvers
-├── package.json
+│       ├── index.ts       # Main server entry point (TypeScript)
+│       ├── server.ts      # Apollo Server setup (TypeScript)
+│       ├── schema.ts      # GraphQL schema definition (TypeScript)
+│       └── resolvers.ts   # Query resolvers (TypeScript)
+├── dist/                  # TypeScript build output
+├── package.json           # Project configuration with ES modules
+├── tsconfig.json          # TypeScript configuration
 └── README.md
 ```
 
 ## 📦 Dependencies
 
-- **apollo-server**: GraphQL server implementation
+- **@apollo/server**: Modern GraphQL server implementation (v5)
 - **graphql**: GraphQL JavaScript reference implementation
+- **tsx**: TypeScript execution environment for development
+- **typescript**: TypeScript compiler
 
 ## 🔧 Available Scripts
 
-- `yarn server` - Start the GraphQL server
+- `yarn dev` - Start the development server with TypeScript hot-reload
+- `yarn build` - Compile TypeScript to JavaScript in the `dist/` folder
+- `yarn start` - Start the production server from compiled JavaScript
+
+## 🛠️ Technical Details
+
+- **TypeScript**: Full TypeScript support with ES modules
+- **ES Modules**: Modern import/export syntax throughout the project
+- **Apollo Server v5**: Latest Apollo Server with standalone server setup
+- **Hot Reload**: Development server automatically restarts on file changes
 
 ## 🎯 Next Steps
 

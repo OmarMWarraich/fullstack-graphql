@@ -1,7 +1,5 @@
-const { gql } = require("apollo-server");
-
-// Basic GraphQl schema - we'll build this up step by step
-const typeDefs = gql`
+// Basic GraphQL schema - we'll build this up step by step
+const typeDefs = `
   enum PetType {
     CAT
     DOG
@@ -20,4 +18,4 @@ const typeDefs = gql`
   }
 `;
 
-module.exports = typeDefs;
+export default typeDefs;

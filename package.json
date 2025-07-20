@@ -1,11 +1,21 @@
 {
   "name": "fullstack-graphql-",
+  "type": "module",
   "packageManager": "yarn@4.9.1",
   "dependencies": {
-    "apollo-server": "^3.13.0",
+    "@apollo/server": "^5.0.0",
     "graphql": "^16.11.0"
   },
   "scripts": {
-    "server": "node api/src/server.js"
+    "build": "tsc",
+    "dev": "tsx api/src/index.ts",
+    "start": "node dist/src/index.js"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^24.0.15",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }
