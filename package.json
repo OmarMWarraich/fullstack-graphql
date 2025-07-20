@@ -1,4 +1,11 @@
 {
   "name": "fullstack-graphql-",
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.1",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.11.0"
+  },
+  "scripts": {
+    "server": "node api/src/server.js"
+  }
 }
