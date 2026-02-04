@@ -3,7 +3,7 @@
   "type": "module",
   "packageManager": "yarn@4.9.1",
   "dependencies": {
-    "@apollo/server": "^5.0.0",
+    "@apollo/server": "^5.4.0",
     "graphql": "^16.11.0",
     "lowdb": "7.0.1",
     "nanoid": "5.1.5"
